@@ -21,7 +21,7 @@ $( document ).ready(function() {
 	
 	//click events for pug faces
     $( "#face-left" ).click(function() {
-    	$( this ).attr("src","face-left-photo.png");
+    	$( this ).attr("src","/media/face-left-photo.png");
     	$( this ).addClass("face-active");
     	$( "#content-left" ).addClass("box-active");
     	$( ".speakers:not(.speaker-playing)" ).fadeIn()
@@ -30,7 +30,7 @@ $( document ).ready(function() {
     });
 
     $( "#face-middle" ).click(function() {
-    	$( this ).attr("src","face-middle-photo.png");
+    	$( this ).attr("src","/media/face-middle-photo.png");
     	$( this ).addClass("face-active");
     	$( "#content-middle" ).addClass("box-active");
     	$( "#treat-heading" ).fadeIn();
@@ -39,7 +39,7 @@ $( document ).ready(function() {
     });
 
     $( "#face-right" ).click(function() {
-    	$( this ).attr("src","face-right-photo.png");
+    	$( this ).attr("src","/media/face-right-photo.png");
     	$( this ).addClass("face-active");
     	$( "#content-right" ).addClass("box-active");
     	$( "#ig-link" ).fadeIn()
@@ -88,29 +88,29 @@ $( document ).ready(function() {
 
     //hover events for pug faces
     $( "#face-left" ).hover(function() {
-    	$( this ).attr("src","face-left-photo.png");
+    	$( this ).attr("src","/media/face-left-photo.png");
 	}, function() {
 		var isClicked = $( this ).hasClass("face-active")
 		if ( !isClicked ) { 
-			$( this ).attr("src","face-left.png");
+			$( this ).attr("src","/media/face-left.png");
 		}
 	});
 
     $( "#face-middle" ).hover(function() {
-    	$( this ).attr("src","face-middle-photo.png");
+    	$( this ).attr("src","/media/face-middle-photo.png");
 	}, function() {
 		var isClicked = $( this ).hasClass("face-active")
 		if ( !isClicked ) { 
-			$( this ).attr("src","face-middle.png");
+			$( this ).attr("src","/media/face-middle.png");
 		}
 	});
 
     $( "#face-right" ).hover(function() {
-    	$( this ).attr("src","face-right-photo.png");
+    	$( this ).attr("src","/media/face-right-photo.png");
     }, function() {
 		var isClicked = $( this ).hasClass("face-active")
 		if ( !isClicked ) { 
-			$( this ).attr("src","face-right.png");
+			$( this ).attr("src","/media/face-right.png");
 		}
 	});
 
