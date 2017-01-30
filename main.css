@@ -1,159 +1,178 @@
 body {
-	background-color: black;
-	overflow: hidden;
 	font-size: 20px;
+	background-color: black;
 	color: white;
 	font-family: "Helvetica Neue", Helvetica, Arial;
-	}
-
-div>img {
-	display: block;
-	position: fixed;
-	top: 45%;
-	cursor: pointer;
-	transition: transform 0.3s ease-in-out;
 }
 
 h1 {
-	position: fixed;
-	display: block;
-	top:25%;
-	margin-top: 45px;
-	left: 50%;
-	z-index: 3;
+	text-align: center;
 	letter-spacing: 6px;
+	text-shadow: -2px 0 #000000,0 2px #000000, 2px 0 #000000,0 -2px #000000;
 }
 
-figcaption {
-	position: fixed;
-	display: block;
-	top: 25%;
-	margin-top: 275px;
-	z-index:10;
+h3 {
+	margin: 0px;
 	letter-spacing: 3px;
 }
 
-.content-box {
-	background-color: #fffc00;
-	height: 0px;
-	position: fixed;
+a {
+	text-decoration: none;
+	color: white;
+}
+
+a:visited {
+	color: white;
+}
+
+#content-background {
+	position:fixed;
+	display:block;
+	width: 100%;
+	height: 100%;
+	top: 0%;
+	left: 0%;
+}
+
+#content-wrapper {
+	position: relative;
 	display: block;
-	top: 25%;
+	margin: 135px auto 0px auto;
+	width: 70%;
 	border-radius: 12px;
+}
+
+.content-box {
+	z-index: -1;
+	min-width: 360px;
 	transition: height 0.3s;
-}
-
-.face-active {
-	transform: translateY(-200px);
-}
-
-.box-active {
-	z-index: 1;
-	height: 400px;
-	left: 20%;
-	right: 20%;
-	position: fixed;
 	display: block;
+	border-radius: 12px;
+	height: 100%;
+	padding: 10px 15px 10px 15px;
+}
+
+#content-box-left {
+	background-color: #3399cc;
+}
+
+
+#content-box-middle {
+	background-color: #fffc00;
+}
+
+#content-box-right {
+	background-image: url(/media/ig-sample-photo.jpg);
+	background-size: cover;
+}
+
+.face {
+	position: absolute;
+	margin-top:-80px;
+	cursor: pointer;
+	transition: transform 0.3s ease-in-out;
+	z-index: 1
+}
+
+#face-left {
+	left:0%;
+}
+
+#face-middle {
+	left:50%;
+	margin-left:-66px;
+}
+
+#face-right {
+	right:0%;
+}
+
+.face-active{
 }
 
 .hide {
 	display: none;
 }
 
-.speakers {
-	z-index: 3;
-	top: 25%;
-	margin-top: 150px;
-	border-radius: 12px;
-	border-color: #ff3366;
-	border-style: solid;
-	border-width: 0px;
-	height: 130px;
-	width: 130px;
+#all-speaker-wrapper {
+	display: block;
+	margin: 0 auto 40px auto;
+	max-width: 468px;
+}
+
+.single-speaker-wrapper {
+	position: relative;
+	display: inline-block;
+	width: 150px;
+	text-align: center;
+}
+
+.single-speaker-wrapper img {
+	padding:5px;
 }
 
 .speaker-playing {
-	border-color: #3399cc;
-	z-index:2;
+	border-color: #fffc00;
+	border-radius: 12px;
+	border-style: solid;
+	border-width: 1px;
 }
 
 .speaker-paused {
-	z-index: 9999;
-
+	margin: 1px;
 }
 
-#speaker-left {
-	left: 30%;
+.speaker-left {
 }
 
-#speaker-middle {
-	left: 50%;
-	margin-left: -65px;
+.speaker-middle {
 }
 
-#speaker-right {
-	right: 30%;
-}
-
-#soundboard-heading {
-	margin-left: -172px;
+.speaker-right {
 }
 
 #speaker-left-caption {
-	left: 30%;
-	margin-left:15px;
 }
 
 #speaker-middle-caption {
-	left: 50%;
-	margin-left:-26px;
 }
 
 #speaker-right-caption {
-	right: 30%;
-	margin-right: 30px;
 }
 
-#treat-heading {
-	margin-left: -178px;
-	letter-spacing: 3px;
+#button-wrapper {
+	display: block;
+	margin: 10px auto 0 auto;
+	max-width: 410px;
 }
 
 .buttons {
+	display: inline-block;
+	position: relative;
 	border-radius: 12px;
-	position: fixed;
-	display: block;
-	width: 160px;
+	width: 170px;
 	height: 50px;
 	text-align: center;
 	vertical-align: middle;
 	line-height: 50px;
-	left: 50%;
-	margin-left:100px;
-	top: 25%;
-	z-index: 3;
+	letter-spacing: 1px;
+	margin: 10px 15px;
 }
+
 .buttons:hover {
 	cursor: pointer;
-	}
+}
+
+.buttons:active {
+	background-color: white;
+}
 
 #treat-drop-button {
-	margin-top: 150px;
 	background-color: #3399cc;
 }
 
-#treat-drop-button:active {
-	background-color: white;
-}
-
-#treat-buy-button {
-	margin-top: 250px;
+#treat-donate-button {
 	background-color: #ff0033;
-}
-
-#treat-buy-button:active {
-	margin-top: 250px;
-	background-color: white;
 }
 
 #treat-notification {
@@ -165,7 +184,7 @@ figcaption {
 	top: 0%;
 	left: 0%;
 	text-align: center;
-	z-index: -999;
+	z-index: 1;
 }
 
 @keyframes color-change {
@@ -176,59 +195,31 @@ figcaption {
     100% { color: white; }
 }
 
-#live-stream {
+.live-stream {
+	display: block;
+	margin: 0 auto;
+	display: block;
 	border-radius: 12px;
-	position: fixed;
-	display: block;
-	background-color: darkgrey;
 	width: 350px;
-	height: 250px;
-	left: 50%;
-	margin-left:-295px;
-	margin-top: 115px;
-	top: 25%;
-	z-index: 3;
+	height: 240px;
+	background-color: darkgrey;
+	cursor: pointer;
 }
 
-#content-left {
-	background-color: #3399cc; 
-}
-
-#content-middle {
-}
-
-#content-right {
-	background-image: url(/media/ig-sample-photo.jpg);
-	background-size: cover;
-}
-
-#background {
-	position: fixed;
- 	top: 0;
-  	left: 0;
-  	width: 100%;
-  	height: 100%;
-} 
-
-#face-left {
-	left: 20%;
-}
-
-#face-middle {
-	left: 50%;
-	margin-left: -62px;
-}
-
-#face-right {
-	right: 20%;
-}
-
-#ig-link {
-	top:25% !important;
-	z-index: 2;
+#ig-link > img {
+	margin: 0px auto;
 	height:400px;
-	left:50%;
-	margin-left: -166px;
-	position: fixed;
 	display: block;
+}
+
+.zoom-video {
+	position: absolute;
+	display: block;
+	margin-left:-350px;
+	left:50%;
+	top:0%;
+	margin-top:-80px;
+	width: 700px;
+	height: 480px;
+	z-index: 9999;
 }
