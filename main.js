@@ -8,6 +8,7 @@ $( document ).ready(function() {
 	$( "#content-box-left" ).hide();
 	$( "#content-box-middle" ).hide();
 	$( "#content-box-right" ).hide();
+	$( "#treat-notification" ).hide();
 
 	//click-to-zoom for video
 	$( "#mjpeg_dest" ).click(function() {
@@ -20,6 +21,7 @@ $( document ).ready(function() {
 		$( "#face-left" ).removeClass("face-active").fadeIn();
     	$( "#face-middle" ).removeClass("face-active").fadeIn();
     	$( "#face-right" ).removeClass("face-active").fadeIn();
+    	$( "audio" ).trigger("pause");
     	$( ".face" ).each(function() {
     		var oldSrc = $( this ).attr("src");
     		var newSrc = oldSrc.replace(/-photo.png/g, ".png");
@@ -41,7 +43,7 @@ $( document ).ready(function() {
 	});
 
     $( "#face-middle" ).hover(function() {
-    	$( this ).attr("src","/media/face-middle-photo.png");
+    	$( this ).attr("src","media/face-middle-photo.png");
 	}, function() {
 		var isClicked = $( this ).hasClass("face-active");
 		if ( !isClicked ) { 
@@ -50,7 +52,7 @@ $( document ).ready(function() {
 	});
 
     $( "#face-right" ).hover(function() {
-    	$( this ).attr("src","/media/face-right-photo.png");
+    	$( this ).attr("src","media/face-right-photo.png");
     }, function() {
 		var isClicked = $( this ).hasClass("face-active");
 		if ( !isClicked ) { 
@@ -61,6 +63,7 @@ $( document ).ready(function() {
 	//click events for pug faces
     $( "#face-left" ).click(function() {
     	$( "#content-box-left" ).fadeIn();
+    	$( ".speaker-paused" ).fadeIn();
     	$( ".speaker-playing" ).hide();
     	$( "#face-middle" ).hide();
     	$( "#face-right" ).hide();
@@ -108,9 +111,11 @@ $( document ).ready(function() {
   		return hours + (minutes < 10 ? ":0" : ":") + minutes;
 	}
 
-	$( "#treat-drop-button" ).click(function() {
+	$( "#treat-drop-button" ).one("click", function() {
 		$( "#treat-drop-audio" ).trigger("play");
 		$( this ).html("FED @ " + currentTime);
 		$( "#treat-notification" ).slideDown();
+		$.ajax("http://plugthepug.ngrok.io/test.cgi", "GET");
+
 	});
 });

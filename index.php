@@ -41,20 +41,20 @@
 				<h1>FEED THE PLUG</h1>
 				<img alt="" class="live-stream" id="mjpeg_dest" src="" />
 				<div id="button-wrapper">
-					<div class="buttons" id="treat-drop-button">FEED TREAT!</div>
-					<audio id="treat-drop-audio" src="media/boxing-bell-sound.mp3" volume="0.8" onended="$('#treat-drop-audio').remove()" preload></audio>
+						<div class="buttons" id="treat-drop-button">FEED TREAT!</div>
 					<a href="http://a.co/fbM3X6v" rel="noopener noreferrer" target="_blank">
 						<div class="buttons" id="treat-donate-button">DONATE</div>
 					</a>
+					<audio id="treat-drop-audio" src="media/boxing-bell-sound.mp3" volume="0.8" onended="$('#treat-drop-audio').remove()" preload></audio>
 				</div>
-				<p id="treat-notification">You dropped a treat! Watch to see if Plug comes to snatch it up. If not...quiet! He may be sleeping : )</p>
 			</div>
 			<img alt="" class="face" id="face-right" src="media/face-right.png"/>
 			<div class="content-box" id="content-box-right">
 				<a id="ig-link" href="https://www.instagram.com/plugthepug/">
-					<img alt="" src="/media/ig-custom.png"/>
+					<img alt="" src="media/ig-custom.png"/>
 				</a>
 			</div>
+			<p id="treat-notification">You dropped a treat! Watch to see if Plug comes to snatch it up. If not...quiet! He may be sleeping : )</p>
 		</div>
 </body>
 </html>
