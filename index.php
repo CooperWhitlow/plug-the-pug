@@ -19,7 +19,7 @@
 					<div class="single-speaker-wrapper">
 						<img alt="" class="speaker-paused speaker-left" src="media/speaker-paused.png"/>
 						<img alt="" class=" speaker-playing speaker-left" src="media/speaker-playing.png"/>
-						<h3 id="single-speaker-left-caption">BREATH</h3>
+						<h3 id="single-speaker-left-caption">BREATHE</h3>
 						<audio id="breath-audio" src="media/breath.mp3" preload loop></audio>
 					</div>
 					<div class="single-speaker-wrapper">
